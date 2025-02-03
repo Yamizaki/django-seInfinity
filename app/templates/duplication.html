@@ -1,5 +1,134 @@
 {% extends "components/main.html" %}
 {% block content %}
-<h1>Duplicacion</h1>
+
+<style>
+    .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+        transform: scale(1.05); /* Agranda ligeramente la tarjeta al pasar el mouse */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    }
+    .product-image {
+        height: 200px;
+        object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    }
+    .container-products {
+        padding: 2rem 0;
+    }
+
+    /**/
+
+    .benefits-section {
+        background-color: #f8f9fa; /* Color de fondo suave */
+        padding: 3rem 1rem;
+    }
+    .benefit-icon {
+        font-size: 2.5rem;
+        color: #0d6efd; /* Color del ícono */
+    }
+    .benefit-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-card:hover {
+        transform: translateY(-10px); /* Eleva ligeramente al pasar el mouse */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    }
+</style>
+
+ <!-- Sección de Beneficios -->
+ <section class="benefits-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Beneficios de Nuestros Productos</h2>
+        <div class="row g-4">
+            <!-- Beneficio 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-3 text-center benefit-card">
+                    <div class="benefit-icon mb-3">
+                        <i class="bi bi-award"></i> <!-- Ícono de Bootstrap -->
+                    </div>
+                    <h5 class="card-title">Alta Calidad</h5>
+                    <p class="card-text">Nuestros productos están fabricados con materiales de primera, garantizando su durabilidad y excelente desempeño.</p>
+                </div>
+            </div>
+            <!-- Beneficio 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-3 text-center benefit-card">
+                    <div class="benefit-icon mb-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="card-title">Seguridad Garantizada</h5>
+                    <p class="card-text">Cumplimos con los más altos estándares de seguridad para brindarte tranquilidad en cada uso.</p>
+                </div>
+            </div>
+            <!-- Beneficio 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-3 text-center benefit-card">
+                    <div class="benefit-icon mb-3">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h5 class="card-title">Diseño Innovador</h5>
+                    <p class="card-text">Ofrecemos diseños modernos y funcionales que se adaptan a tus necesidades y estilo de vida.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container-products">
+    <div class="container">
+        <h1 class="text-center mb-5">Nuestros Productos</h1>
+        <div class="row g-4">
+            <!-- Producto 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top product-image" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Una breve descripción del producto.</p>
+                        <p class="text-success fw-bold">$20.00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top product-image" alt="Producto 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Otra descripción breve del producto.</p>
+                        <p class="text-success fw-bold">$30.00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top product-image" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Un producto más con su descripción.</p>
+                        <p class="text-success fw-bold">$25.00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top product-image" alt="Producto 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve para el producto.</p>
+                        <p class="text-success fw-bold">$15.00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 {% endblock content %}
